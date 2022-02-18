@@ -44,3 +44,95 @@ to add in exception handling to the project?
 - Clue 2: What if someone wants to find a book by an ID that doesn't yet exist? 
   How can we improve the API by handling errors gracefully and show a helpful message to the client?
   
+
+////////////////////////////////////////////////
+# USAGE
+This is Minimalist Book Manager API
+Follow is the endpoint to use for specific function
+
+## Get All Books
+### Request
+`GET /api/v1/book/`
+### Response
+  Status: 200 OK
+  
+  [
+  {
+  "id": 1,
+  "title": "Book title 1",
+  "description": "Book Description 1",
+  "author": "Author 1",
+  "genre": "Romance"
+  },
+  {
+  "id": 2,
+  "title": "Book title 2",
+  "description": "Book Description 2",
+  "author": "Author 2",
+  "genre": "Romance"
+  },
+  {
+  "id": 3,
+  "title": "Book title 3",
+  "description": "Book Description 3",
+  "author": "Author 3",
+  "genre": "Romance"
+  }
+  ]
+
+## Get a Book by ID
+### Request
+`GET /api/v1/book/:id`
+### Response
+  Status: 200 OK
+  
+  {
+  "id": 1,
+  "title": "Book title 1",
+  "description": "Book Description 1",
+  "author": "Author 1",
+  "genre": "Romance"
+  }
+
+## Add a Book
+### Request
+`POST /api/v1/book/`
+
+  book:{
+  "title": "Book title 1",
+  "description": "Book Description 1",
+  "author": "Author 1",
+  "genre": "Romance"
+  }
+
+### Response
+  Status: 201 OK
+
+  {
+  "id": 1,
+  "title": "Book title 1",
+  "description": "Book Description 1",
+  "author": "Author 1",
+  "genre": "Romance"
+  }
+
+## Update a Book
+### Request
+`PUT /api/v1/book/:id`
+### Response
+  Status: 200 OK
+
+  {
+  "id": 1,
+  "title": "Book title 001",
+  "description": "Book Description 001",
+  "author": "Author 001",
+  "genre": "Romance"
+  }
+  
+
+## Delete a Book
+### Request
+`DELETE /api/v1/book/:id`
+### Response
+  Status: 200 OK
